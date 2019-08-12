@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainMenuViewController" id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="RPSLS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select game mode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-dN-FSg">
+                                <rect key="frame" x="20" y="76" width="374" height="107.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBA-Jw-sdY">
+                                <rect key="frame" x="20" y="413" width="374" height="80"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.732972051056338" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fm6-sd-Qcn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Player vs Computer">
+                                    <color key="titleColor" white="0.33000000000000002" alpha="0.81000000000000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-cI-qU3">
+                                <rect key="frame" x="20" y="573" width="374" height="80"/>
+                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Comp vs Comp">
+                                    <color key="titleColor" white="0.33000000000000002" alpha="0.80941901409999994" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pTF-cI-qU3" firstAttribute="height" secondItem="LBA-Jw-sdY" secondAttribute="height" id="HqF-ca-w1E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Js-dN-FSg" secondAttribute="trailing" constant="20" id="JtK-eo-3RT"/>
+                            <constraint firstItem="pTF-cI-qU3" firstAttribute="top" secondItem="LBA-Jw-sdY" secondAttribute="bottom" constant="80" id="OBV-e6-mq4"/>
+                            <constraint firstItem="LBA-Jw-sdY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OgQ-pn-Fd8"/>
+                            <constraint firstItem="LBA-Jw-sdY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PSB-LI-Aol"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LBA-Jw-sdY" secondAttribute="trailing" constant="20" id="PY7-2c-yyT"/>
+                            <constraint firstItem="3Js-dN-FSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PrD-rK-Fow"/>
+                            <constraint firstItem="pTF-cI-qU3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xf8-uh-nil"/>
+                            <constraint firstItem="LBA-Jw-sdY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="j0k-z7-ack"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pTF-cI-qU3" secondAttribute="trailing" constant="20" id="mE5-ko-G5I"/>
+                            <constraint firstItem="3Js-dN-FSg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="tYs-n9-HLV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cvcButton" destination="pTF-cI-qU3" id="1sO-5W-8Kc"/>
+                        <outlet property="pvcButton" destination="LBA-Jw-sdY" id="Bs4-WF-T2E"/>
+                        <outlet property="titleLabel" destination="3Js-dN-FSg" id="3Tr-Bg-xtm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--Game Mode View Controller-->
+        <scene sceneID="tKI-rB-0L5">
+            <objects>
+                <viewController storyboardIdentifier="GameModeViewController" id="idO-CF-AE0" customClass="GameModeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z39-FJ-1p0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select game mode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-he-Ccm">
+                                <rect key="frame" x="20" y="76" width="374" height="107.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4O-6M-c1I">
+                                <rect key="frame" x="20" y="413" width="374" height="80"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.73297205109999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="u2t-kH-jDk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Classic">
+                                    <color key="titleColor" white="0.33000000000000002" alpha="0.81000000000000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp4-7T-LoZ">
+                                <rect key="frame" x="20" y="573" width="374" height="80"/>
+                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="RPSLS">
+                                    <color key="titleColor" white="0.33000000000000002" alpha="0.80941901409999994" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d4O-6M-c1I" firstAttribute="centerY" secondItem="LOa-4U-LLy" secondAttribute="centerY" id="1TC-KK-P9s"/>
+                            <constraint firstItem="LOa-4U-LLy" firstAttribute="trailing" secondItem="d4O-6M-c1I" secondAttribute="trailing" constant="20" id="6bm-0e-Zgk"/>
+                            <constraint firstItem="LOa-4U-LLy" firstAttribute="trailing" secondItem="eX3-he-Ccm" secondAttribute="trailing" constant="20" id="79D-6y-f9Z"/>
+                            <constraint firstItem="bp4-7T-LoZ" firstAttribute="height" secondItem="d4O-6M-c1I" secondAttribute="height" id="9a8-Vi-6KD"/>
+                            <constraint firstItem="LOa-4U-LLy" firstAttribute="trailing" secondItem="bp4-7T-LoZ" secondAttribute="trailing" constant="20" id="DUw-sV-W9I"/>
+                            <constraint firstItem="d4O-6M-c1I" firstAttribute="centerX" secondItem="LOa-4U-LLy" secondAttribute="centerX" id="Fk5-b5-3Eh"/>
+                            <constraint firstItem="bp4-7T-LoZ" firstAttribute="leading" secondItem="LOa-4U-LLy" secondAttribute="leading" constant="20" id="GYx-TE-nk0"/>
+                            <constraint firstItem="bp4-7T-LoZ" firstAttribute="top" secondItem="d4O-6M-c1I" secondAttribute="bottom" constant="80" id="LI7-5d-L5X"/>
+                            <constraint firstItem="d4O-6M-c1I" firstAttribute="leading" secondItem="LOa-4U-LLy" secondAttribute="leading" constant="20" id="oJc-Yu-WbQ"/>
+                            <constraint firstItem="eX3-he-Ccm" firstAttribute="top" secondItem="LOa-4U-LLy" secondAttribute="top" constant="32" id="s8K-7t-iQU"/>
+                            <constraint firstItem="eX3-he-Ccm" firstAttribute="leading" secondItem="LOa-4U-LLy" secondAttribute="leading" constant="20" id="u0l-mb-DsM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LOa-4U-LLy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhB-fa-9hv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="21"/>
+        </scene>
+    </scenes>
+</document>
