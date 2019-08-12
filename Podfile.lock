@@ -1,28 +1,3 @@
-PODS:
-  - Kingfisher (4.10.1)
-  - Networking (4.1.1)
-  - pop (1.0.12)
-  - SwiftSVG (2.3.0)
-
-DEPENDENCIES:
-  - Kingfisher (~> 4.10.1)
-  - Networking (~> 4.1.1)
-  - pop
-  - SwiftSVG (~> 2.0)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Kingfisher
-    - Networking
-    - pop
-    - SwiftSVG
-
-SPEC CHECKSUMS:
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  Networking: ffde5754883907f90f9f751e183eba4a75dc4b89
-  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
-  SwiftSVG: a864db6198fbddfd377f8169849580df18512e67
-
-PODFILE CHECKSUM: ebb5815b292b598d69860586c9e846e9006c9ab1
+PODFILE CHECKSUM: 3a1d895530896c418a75e421c837b874324c487f
 
 COCOAPODS: 1.5.3

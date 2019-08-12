@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 enum Animation {
-    case top
-    case left
-    case right
-    case bottom
+    case fromTop
+    case fromLeft
+    case fromRight
+    case fromBottom
 }
 
 
@@ -24,6 +24,8 @@ class Animator {
     var duration: Double                  = 0.8
     var dampingRatio: CGFloat             = 0.8
     var springVelocity: CGFloat           = 0.8
+    var option: UIView.AnimationOptions   = .curveEaseOut
+    
     private var animates: [ViewAnimation] = []
     
     func enqueue(_ view: UIView?,
@@ -39,17 +41,17 @@ class Animator {
         let height        = bufferedFrame?.height ?? 0
         
         switch animation {
-        case .top:
+        case .fromTop:
             view?.frame = CGRect(x: minX,
                                 y: -(maxY * 2),
                                 width: width,
                                 height: height)
-        case .left:
+        case .fromLeft:
             view?.frame = CGRect(x: -(maxX * 2),
                                 y: minY,
                                 width: width,
                                 height: height)
-        case .right:
+        case .fromRight:
             view?.frame = CGRect(x: maxX * 2,
                                 y: minY,
                                 width: width,
@@ -76,8 +78,8 @@ class Animator {
     }
     
     func performSequence() {
-        animates.forEach { (view, animation, frame) in
-            perform((view, animation, frame))
+        animates.forEach { _, _, _ in
+            perform(dequeue())
         }
     }
 }
@@ -91,16 +93,16 @@ extension Animator {
         let frame     = viewAnimation.frame
         
         switch animation {
-        case .top?:
+        case .fromTop?:
             performTop(view,
                        frame: frame)
-        case .left?:
+        case .fromLeft?:
             performLeft(view,
                         frame: frame)
-        case .right?:
+        case .fromRight?:
             performRight(view,
                          frame: frame)
-        case .bottom?:
+        case .fromBottom?:
             performBottom(view,
                           frame: frame)
         default:
@@ -155,7 +157,7 @@ extension Animator {
                        delay: 0,
                        usingSpringWithDamping: dampingRatio,
                        initialSpringVelocity: springVelocity,
-                       options: .curveEaseOut,
+                       options: option,
                        animations: animations,
                        completion: completion)
     }

@@ -13,12 +13,24 @@
 		F8C2BF0A2301427700B2A9D0 /* RPSLS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C2BF082301427700B2A9D0 /* RPSLS.storyboard */; };
 		F8C2BF0C2301427800B2A9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C2BF0B2301427800B2A9D0 /* Assets.xcassets */; };
 		F8C2BF0F2301427800B2A9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C2BF0D2301427800B2A9D0 /* LaunchScreen.storyboard */; };
-		F8C2BF1A2301427800B2A9D0 /* RPSLSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF192301427800B2A9D0 /* RPSLSTests.swift */; };
+		F8C2BF1A2301427800B2A9D0 /* GameViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF192301427800B2A9D0 /* GameViewModelTest.swift */; };
 		F8C2BF252301427800B2A9D0 /* RPSLSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF242301427800B2A9D0 /* RPSLSUITests.swift */; };
 		F8C2BF44230148F000B2A9D0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF43230148F000B2A9D0 /* BaseViewController.swift */; };
 		F8C2BF462301490300B2A9D0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF452301490300B2A9D0 /* BaseViewModel.swift */; };
 		F8C2BF482301499500B2A9D0 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF472301499500B2A9D0 /* MainMenuViewModel.swift */; };
 		F8C2BF4A2301527700B2A9D0 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF492301527700B2A9D0 /* Animator.swift */; };
+		F8C2BF4C2301663700B2A9D0 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF4B2301663700B2A9D0 /* GameMode.swift */; };
+		F8C2BF4F2301773400B2A9D0 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF4E2301773400B2A9D0 /* ViewModelFactory.swift */; };
+		F8C2BF51230177EB00B2A9D0 /* ModeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF50230177EB00B2A9D0 /* ModeMenuViewModel.swift */; };
+		F8C2BF532301799700B2A9D0 /* ModeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF522301799700B2A9D0 /* ModeMenuViewController.swift */; };
+		F8C2BF5523017AB900B2A9D0 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5423017AB900B2A9D0 /* ViewControllerFactory.swift */; };
+		F8C2BF5723017AF400B2A9D0 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5623017AF400B2A9D0 /* GlobalConstants.swift */; };
+		F8C2BF5A230180DA00B2A9D0 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF59230180DA00B2A9D0 /* ViewHelper.swift */; };
+		F8C2BF5C230189B700B2A9D0 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5B230189B700B2A9D0 /* ColorHelper.swift */; };
+		F8C2BF5E2301B28000B2A9D0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5D2301B28000B2A9D0 /* GameViewController.swift */; };
+		F8C2BF602301B28B00B2A9D0 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5F2301B28B00B2A9D0 /* GameViewModel.swift */; };
+		F8C2BF622301B2DC00B2A9D0 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF612301B2DC00B2A9D0 /* GameManager.swift */; };
+		F8C2BF642301B37400B2A9D0 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF632301B37400B2A9D0 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +62,7 @@
 		F8C2BF0E2301427800B2A9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C2BF102301427800B2A9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C2BF152301427800B2A9D0 /* RPSLSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPSLSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8C2BF192301427800B2A9D0 /* RPSLSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSLSTests.swift; sourceTree = "<group>"; };
+		F8C2BF192301427800B2A9D0 /* GameViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTest.swift; sourceTree = "<group>"; };
 		F8C2BF1B2301427800B2A9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C2BF202301427800B2A9D0 /* RPSLSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPSLSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C2BF242301427800B2A9D0 /* RPSLSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSLSUITests.swift; sourceTree = "<group>"; };
@@ -59,6 +71,18 @@
 		F8C2BF452301490300B2A9D0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		F8C2BF472301499500B2A9D0 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		F8C2BF492301527700B2A9D0 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		F8C2BF4B2301663700B2A9D0 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		F8C2BF4E2301773400B2A9D0 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		F8C2BF50230177EB00B2A9D0 /* ModeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeMenuViewModel.swift; sourceTree = "<group>"; };
+		F8C2BF522301799700B2A9D0 /* ModeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeMenuViewController.swift; sourceTree = "<group>"; };
+		F8C2BF5423017AB900B2A9D0 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		F8C2BF5623017AF400B2A9D0 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		F8C2BF59230180DA00B2A9D0 /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		F8C2BF5B230189B700B2A9D0 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		F8C2BF5D2301B28000B2A9D0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F8C2BF5F2301B28B00B2A9D0 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		F8C2BF612301B2DC00B2A9D0 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		F8C2BF632301B37400B2A9D0 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +153,8 @@
 		F8C2BF032301427600B2A9D0 /* RPSLS */ = {
 			isa = PBXGroup;
 			children = (
+				F8C2BF58230180CF00B2A9D0 /* Helper */,
+				F8C2BF4D2301772900B2A9D0 /* Factories */,
 				F8C2BF042301427700B2A9D0 /* AppDelegate.swift */,
 				F8C2BF402301488200B2A9D0 /* Constants */,
 				F8C2BF3E2301487600B2A9D0 /* Storyboards */,
@@ -138,6 +164,7 @@
 				F8C2BF422301489500B2A9D0 /* Models */,
 				F8C2BF0B2301427800B2A9D0 /* Assets.xcassets */,
 				F8C2BF102301427800B2A9D0 /* Info.plist */,
+				F8C2BF612301B2DC00B2A9D0 /* GameManager.swift */,
 			);
 			path = RPSLS;
 			sourceTree = "<group>";
@@ -145,7 +172,7 @@
 		F8C2BF182301427800B2A9D0 /* RPSLSTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8C2BF192301427800B2A9D0 /* RPSLSTests.swift */,
+				F8C2BF192301427800B2A9D0 /* GameViewModelTest.swift */,
 				F8C2BF1B2301427800B2A9D0 /* Info.plist */,
 			);
 			path = RPSLSTests;
@@ -165,6 +192,8 @@
 			children = (
 				F8C2BF43230148F000B2A9D0 /* BaseViewController.swift */,
 				F8C2BF062301427700B2A9D0 /* MainMenuViewController.swift */,
+				F8C2BF522301799700B2A9D0 /* ModeMenuViewController.swift */,
+				F8C2BF5D2301B28000B2A9D0 /* GameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +218,7 @@
 		F8C2BF402301488200B2A9D0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F8C2BF5623017AF400B2A9D0 /* GlobalConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -198,6 +228,8 @@
 			children = (
 				F8C2BF452301490300B2A9D0 /* BaseViewModel.swift */,
 				F8C2BF472301499500B2A9D0 /* MainMenuViewModel.swift */,
+				F8C2BF50230177EB00B2A9D0 /* ModeMenuViewModel.swift */,
+				F8C2BF5F2301B28B00B2A9D0 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,8 +237,28 @@
 		F8C2BF422301489500B2A9D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8C2BF4B2301663700B2A9D0 /* GameMode.swift */,
+				F8C2BF632301B37400B2A9D0 /* Move.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F8C2BF4D2301772900B2A9D0 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				F8C2BF4E2301773400B2A9D0 /* ViewModelFactory.swift */,
+				F8C2BF5423017AB900B2A9D0 /* ViewControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		F8C2BF58230180CF00B2A9D0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F8C2BF59230180DA00B2A9D0 /* ViewHelper.swift */,
+				F8C2BF5B230189B700B2A9D0 /* ColorHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +272,6 @@
 				F8C2BEFD2301427600B2A9D0 /* Sources */,
 				F8C2BEFE2301427600B2A9D0 /* Frameworks */,
 				F8C2BEFF2301427600B2A9D0 /* Resources */,
-				87DD5413485C4E09B0D78FF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,34 +411,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87DD5413485C4E09B0D78FF3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RPSLS/Pods-RPSLS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Networking/Networking.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSVG/SwiftSVG.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Networking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSVG.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPSLS/Pods-RPSLS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -395,12 +418,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C2BF622301B2DC00B2A9D0 /* GameManager.swift in Sources */,
+				F8C2BF4C2301663700B2A9D0 /* GameMode.swift in Sources */,
 				F8C2BF4A2301527700B2A9D0 /* Animator.swift in Sources */,
 				F8C2BF072301427700B2A9D0 /* MainMenuViewController.swift in Sources */,
 				F8C2BF462301490300B2A9D0 /* BaseViewModel.swift in Sources */,
+				F8C2BF602301B28B00B2A9D0 /* GameViewModel.swift in Sources */,
 				F8C2BF482301499500B2A9D0 /* MainMenuViewModel.swift in Sources */,
+				F8C2BF5C230189B700B2A9D0 /* ColorHelper.swift in Sources */,
+				F8C2BF51230177EB00B2A9D0 /* ModeMenuViewModel.swift in Sources */,
+				F8C2BF5A230180DA00B2A9D0 /* ViewHelper.swift in Sources */,
+				F8C2BF642301B37400B2A9D0 /* Move.swift in Sources */,
+				F8C2BF4F2301773400B2A9D0 /* ViewModelFactory.swift in Sources */,
 				F8C2BF052301427700B2A9D0 /* AppDelegate.swift in Sources */,
+				F8C2BF5E2301B28000B2A9D0 /* GameViewController.swift in Sources */,
+				F8C2BF532301799700B2A9D0 /* ModeMenuViewController.swift in Sources */,
 				F8C2BF44230148F000B2A9D0 /* BaseViewController.swift in Sources */,
+				F8C2BF5723017AF400B2A9D0 /* GlobalConstants.swift in Sources */,
+				F8C2BF5523017AB900B2A9D0 /* ViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C2BF1A2301427800B2A9D0 /* RPSLSTests.swift in Sources */,
+				F8C2BF1A2301427800B2A9D0 /* GameViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +652,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FQW794VJB9;
+				DEVELOPMENT_TEAM = 86TST43N9D;
 				INFOPLIST_FILE = RPSLSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,7 +673,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FQW794VJB9;
+				DEVELOPMENT_TEAM = 86TST43N9D;
 				INFOPLIST_FILE = RPSLSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

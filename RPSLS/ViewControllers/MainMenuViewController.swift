@@ -16,23 +16,68 @@ class MainMenuViewController: BaseViewController<MainMenuViewModel> {
     
     var animator: Animator = Animator()
     
+    override func loadView() {
+        super.loadView()
+        
+        viewModel = ViewModelFactory.createMainMenuVM(delegate: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         animator.enqueue(titleLabel,
-                         animation: .top)
+                         animation: .fromTop)
         animator.enqueue(pvcButton,
-                         animation: .left)
+                         animation: .fromLeft)
         animator.enqueue(cvcButton,
-                         animation: .right)
+                         animation: .fromRight)
+        
+        navigationController?.setNavigationBarHidden(true,
+                                                     animated: false)
     }
 
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         animator.performSequence()
     }
+    
+    override func push() {
+        super.push()
+        
+        let mode = viewModel?.getGameMode()
+        
+        if let vc = ViewControllerFactory.createModeMenuVC(gameMode: mode) {
+            navigationController?.pushViewController(vc,
+                                                     animated: true)
+        }
+    }
 }
 
+//MARK: - IBActions
+extension MainMenuViewController {
+    @IBAction func didTapPVC(_ sender: UIButton) {
+        
+        self.viewModel?.setPlayType(.PVC)
+    }
+    
+    @IBAction func didTapCVC(_ sender: UIButton) {
+        
+        self.viewModel?.setPlayType(.CVC)
+    }
+}
+
+//MARK: - Custom Methods
+extension MainMenuViewController {
+    
+}
+
+//MARK: - ViewModel Delegate
+extension MainMenuViewController: BaseViewModelDelegate {
+    
+    func didUpdateViewmodel(_ viewModel: BaseViewModel) {
+        //Game type selected
+        push()
+    }
+}

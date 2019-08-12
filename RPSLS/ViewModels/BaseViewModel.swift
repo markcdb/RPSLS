@@ -10,7 +10,7 @@ import Foundation
 
 protocol BaseViewModelDelegate: class {
     
-    func didUpdateViewmodel(_ viewModel: BaseViewModelDelegate)
+    func didUpdateViewmodel(_ viewModel: BaseViewModel)
 }
 
 class BaseViewModel {

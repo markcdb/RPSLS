@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EE3B3CFA836D0BE379DE60108F3C199"
+               BlueprintIdentifier = "A0EA3AFE02D9F5BE1E6EA698009B32F0"
                BuildableName = "Pods_RPSLS.framework"
                BlueprintName = "Pods-RPSLS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6EE3B3CFA836D0BE379DE60108F3C199"
+            BlueprintIdentifier = "A0EA3AFE02D9F5BE1E6EA698009B32F0"
             BuildableName = "Pods_RPSLS.framework"
             BlueprintName = "Pods-RPSLS"
             ReferencedContainer = "container:Pods.xcodeproj">
