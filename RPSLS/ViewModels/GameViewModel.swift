@@ -37,12 +37,12 @@ class GameViewModel: BaseViewModel {
         chosenMove = gameManager?.moves[indexPath.row]
     }
     
-    func match() -> Bool {
-        guard let manager = gameManager else { return false }
+    func match() -> GameManager.GameResult? {
+        guard let manager = gameManager else { return nil }
         let player: Move   = chosenMove == nil ? manager.randomized() : chosenMove!
         let computer: Move =  manager.randomized()
         
-        return manager.didPlayerWin(player,
+        return manager.compareMove(player,
                                     rhs: computer)
     }
 }

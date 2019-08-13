@@ -9,6 +9,11 @@
 import Foundation
 
 class GameManager {
+    enum GameResult {
+        case Win
+        case Lose
+        case Draw
+    }
     
     var gameMode: GameMode?
     var moves: [Move]                       = []
@@ -37,16 +42,21 @@ class GameManager {
         return moves[Int.random(in: 0..<moves.count)]
     }
     
-    func didPlayerWin(_ lhs: Move, rhs: Move) -> Bool {
-        let move = lhs.winSet?[rhs.name ?? blank_]
+    func compareMove(_ lhs: Move, rhs: Move) -> GameResult {
+        var move = lhs.winSet?[rhs.name ?? blank_]
         
         if move != nil {
             score.player += 1
-            return true
+            return .Win
         }
         
-        score.computer += 1
-        return false
+        move = rhs.winSet?[lhs.name ?? blank_]
+        if move != nil {
+            score.computer += 1
+            return .Lose
+        }
+        
+        return .Draw
     }
     
     func createRock() -> Move {
@@ -136,13 +146,13 @@ class MockGameManager: GameManager {
     
     var mockMove: Move?
     
-    override func didPlayerWin(_ lhs: Move, rhs: Move) -> Bool {
+    override func compareMove(_ lhs: Move, rhs: Move) -> GameResult {
         if let move = mockMove {
-            return super.didPlayerWin(lhs,
+            return super.compareMove(lhs,
                                       rhs: move)
         }
         
-        return super.didPlayerWin(lhs,
+        return super.compareMove(lhs,
                                   rhs: rhs)
     }
 }

@@ -40,55 +40,153 @@ class GameViewModelTest: XCTestCase {
                                                                      delegate: self)
     }
     
-    func matchTest(computer: Move?, indexPath: IndexPath) {
+    func matchTest(computer: Move?,
+                   index: Int,
+                   expectedResult: GameManager.GameResult) {
+        
         gameManager?.mockMove = computer
         
-        viewModel?.setMoveAt(indexPath)
+        viewModel?.setMoveAt(IndexPath(row: index,
+                                       section: 0))
         
-        XCTAssert(viewModel?.match() ?? false, "Should win")
+        XCTAssert(viewModel?.match() == expectedResult, "Should win")
     }
     
     func testRPSRock() {
         createDependency(game: .RPS)
       
         matchTest(computer: gameManager?.createScissors(),
-                  indexPath: IndexPath(row: MoveEnum.Rock.rawValue,
-                                       section: 0))
+                  index: MoveEnum.Rock.rawValue,
+                  expectedResult: .Win)
     }
     
     func testRPSPaper() {
         createDependency(game: .RPS)
        
         matchTest(computer: gameManager?.createRock(),
-                  indexPath: IndexPath(row: MoveEnum.Paper.rawValue,
-                                       section: 0))
+                  index: MoveEnum.Paper.rawValue,
+                  expectedResult: .Win)
     }
     
     func testRPSScissors() {
         createDependency(game: .RPS)
         
         matchTest(computer: gameManager?.createPaper(),
-                  indexPath: IndexPath(row: MoveEnum.Scissors.rawValue,
-                                       section: 0))
+                  index: MoveEnum.Scissors.rawValue,
+                  expectedResult: .Win)
     }
     
     func testRPSLSLizard() {
         createDependency(game: .RPSLS)
         
         matchTest(computer: gameManager?.createSpock(),
-                  indexPath: IndexPath(row: MoveEnum.Lizard.rawValue,
-                                       section: 0))
+                  index: MoveEnum.Lizard.rawValue,
+                  expectedResult: .Win)
     }
     
     func testRPSLSSpock() {
         createDependency(game: .RPSLS)
         
         matchTest(computer: gameManager?.createScissors(),
-                  indexPath: IndexPath(row: MoveEnum.Spock.rawValue,
-                                       section: 0))
+                  index: MoveEnum.Spock.rawValue,
+                  expectedResult: .Win)
     }
     
+    func testRPSRockDraw() {
+        createDependency(game: .RPS)
+        
+        matchTest(computer: gameManager?.createRock(),
+                  index: MoveEnum.Rock.rawValue,
+                  expectedResult: .Draw)
+    }
     
+    func testRPSPaperDraw() {
+        createDependency(game: .RPS)
+        
+        matchTest(computer: gameManager?.createPaper(),
+                  index: MoveEnum.Paper.rawValue,
+                  expectedResult: .Draw)
+    }
+    
+    func testRPSScissorsDraw() {
+        createDependency(game: .RPS)
+        
+        matchTest(computer: gameManager?.createScissors(),
+                  index: MoveEnum.Scissors.rawValue,
+                  expectedResult: .Draw)
+    }
+    
+    func testRPSLSLizardDraw() {
+        createDependency(game: .RPSLS)
+        
+        matchTest(computer: gameManager?.createLizard(),
+                  index: MoveEnum.Lizard.rawValue,
+                  expectedResult: .Draw)
+    }
+    
+    func testRPSLSSpockDraw() {
+        createDependency(game: .RPSLS)
+        
+        matchTest(computer: gameManager?.createSpock(),
+                  index: MoveEnum.Spock.rawValue,
+                  expectedResult: .Draw)
+    }
+    
+    func testRPSRockLose() {
+        createDependency(game: .RPS)
+        
+        matchTest(computer: gameManager?.createPaper(),
+                  index: MoveEnum.Rock.rawValue,
+                  expectedResult: .Lose)
+    }
+    
+    func testRPSPaperLose() {
+        createDependency(game: .RPS)
+        
+        matchTest(computer: gameManager?.createScissors(),
+                  index: MoveEnum.Paper.rawValue,
+                  expectedResult: .Lose)
+    }
+    
+    func testRPSScissorsLose() {
+        createDependency(game: .RPS)
+        
+        matchTest(computer: gameManager?.createRock(),
+                  index: MoveEnum.Scissors.rawValue,
+                  expectedResult: .Lose)
+    }
+    
+    func testRPSLSLizardLose() {
+        createDependency(game: .RPSLS)
+        
+        matchTest(computer: gameManager?.createRock(),
+                  index: MoveEnum.Lizard.rawValue,
+                  expectedResult: .Lose)
+    }
+    
+    func testRPSLSSpockLose() {
+        createDependency(game: .RPSLS)
+        
+        matchTest(computer: gameManager?.createLizard(),
+                  index: MoveEnum.Spock.rawValue,
+                  expectedResult: .Lose)
+    }
+    
+    func testRPSLSPaperVsLizard() {
+        createDependency(game: .RPSLS)
+        
+        matchTest(computer: gameManager?.createLizard(),
+                  index: MoveEnum.Paper.rawValue,
+                  expectedResult: .Lose)
+    }
+    
+    func testRPSLSScissorsVsSpock() {
+        createDependency(game: .RPSLS)
+        
+        matchTest(computer: gameManager?.createSpock(),
+                  index: MoveEnum.Scissors.rawValue,
+                  expectedResult: .Lose)
+    }
 }
 
 extension GameViewModelTest: BaseViewModelDelegate {
