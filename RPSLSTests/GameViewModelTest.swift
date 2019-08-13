@@ -187,6 +187,24 @@ class GameViewModelTest: XCTestCase {
                   index: MoveEnum.Scissors.rawValue,
                   expectedResult: .Lose)
     }
+    
+    func testScoreComputer() {
+        createDependency(game: .RPS)
+        
+        gameManager?.mockMove = gameManager?.createPaper()
+        
+        viewModel?.setMoveAt(IndexPath(row: MoveEnum.Rock.rawValue,
+                                       section: 0))
+        
+        let match = viewModel?.match()
+        
+        if match == .Lose {
+            XCTAssert(gameManager?.score.computer == 1,
+                      "Computer should score 1 after winning")
+        } else {
+            XCTFail("Should be lose")
+        }
+    }
 }
 
 extension GameViewModelTest: BaseViewModelDelegate {
