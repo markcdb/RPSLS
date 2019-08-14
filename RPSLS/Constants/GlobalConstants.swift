@@ -14,6 +14,7 @@ let blank_ = ""
 struct StoryboardIDs {
     
     static let modeMenu        = "ModeMenuViewController"
+    static let game            = "GameViewController"
 }
 
 struct Storyboard {
@@ -28,4 +29,14 @@ struct MoveNames {
     static let scissors = "Scissors"
     static let lizard   = "Lizard"
     static let spock    = "Spock"
+}
+
+struct Cells {
+    
+    static let moveCell = "MoveCell"
+}
+
+struct Heights {
+    
+    static let cvExtendedHeight = (UIScreen.main.bounds.height / 2) - 80
 }

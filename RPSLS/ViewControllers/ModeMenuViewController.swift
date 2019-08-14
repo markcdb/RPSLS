@@ -57,11 +57,27 @@ class ModeMenuViewController: BaseViewController<ModeMenuViewModel> {
     }
     */
 
+    override func push() {
+        super.push()
+        
+        if let vc = ViewControllerFactory.createGameVC(gameMode: viewModel?.getGameMode()) {
+            navigationController?.pushViewController(vc,
+                                                     animated: true)
+        }
+    }
+    
+    @IBAction func didTapClassic(_ sender: UIButton) {
+        viewModel?.setGame(.RPS)
+    }
+    
+    @IBAction func didTapRPSLS(_ sender: UIButton) {
+        viewModel?.setGame(.RPSLS)
+    }
 }
 
 extension ModeMenuViewController: BaseViewModelDelegate {
     
     func didUpdateViewmodel(_ viewModel: BaseViewModel) {
-        
+        push()
     }
 }

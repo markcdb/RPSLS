@@ -22,4 +22,18 @@ class ViewControllerFactory {
         
         return vc
     }
+    
+    static func createGameVC(gameMode: GameMode?) -> GameViewController? {
+        let sid = StoryboardIDs.game
+        
+        let viewController  = Storyboard.rpsls.instantiateViewController(withIdentifier: sid)
+        guard let vc = viewController as? GameViewController else { return nil }
+        
+        let vm       = ViewModelFactory.createGameViewModel(gameManager: GameManager(gameMode: gameMode),
+                                                            gameMode: gameMode,
+                                                            delegate: vc)
+        vc.viewModel = vm
+        
+        return vc
+    }
 }
