@@ -11,9 +11,11 @@ import Foundation
 
 class GameViewModel: BaseViewModel {
     
+    public var chosenMove: Move?
+    public var computerMove: Move?
+    
     private var gameManager: GameManager?
     private var gameMode: GameMode?
-    private var chosenMove: Move?
     
     public var hasSelectedMove: Bool {
         return chosenMove != nil
@@ -27,12 +29,21 @@ class GameViewModel: BaseViewModel {
         super.init(delegate: delegate)
     }
     
+    func resetChosen() {
+        chosenMove = nil
+    }
+    
     func getGameMoveCount() -> Int {
         guard let gm = gameManager else { return 0 }
         
         return gm.moves.count
     }
     
+    func getGameManager() -> GameManager? {
+        
+        return gameManager
+    }
+
     func getGameMode() -> GameMode? {
         
         return gameMode
@@ -62,12 +73,25 @@ class GameViewModel: BaseViewModel {
         chosenMove = gameManager?.moves[indexPath.row]
     }
     
-    func match() -> GameManager.GameResult? {
-        guard let manager = gameManager else { return nil }
+    func match() {
+        guard let manager = gameManager else { return }
         let player: Move   = chosenMove == nil ? manager.randomized() : chosenMove!
         let computer: Move =  manager.randomized()
         
-        return manager.compareMove(player,
-                                    rhs: computer)
+        self.computerMove = computer
+        
+        manager.compareMove(player,
+                            rhs: computer,
+                            completion: {[weak self] in
+                                guard let self = self else { return }
+                                
+                                self.delegate?.didUpdateViewmodel(self)
+                                
+        })
+    }
+    
+    func getResult() -> GameManager.GameResult? {
+        
+        return gameManager?.result
     }
 }

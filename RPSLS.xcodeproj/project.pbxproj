@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D0017A4AA0718AD7206ACE8 /* Pods_RPSLS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD39F1BCAA3F4C1C4FB821 /* Pods_RPSLS.framework */; };
+		F8AF3B1F2305782900C9D9AB /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF3B1E2305782900C9D9AB /* ResultViewModel.swift */; };
+		F8B9018F23040974009BCF49 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9018E23040974009BCF49 /* ResultViewController.swift */; };
 		F8C03ADF23028E7A0056DB5E /* MoveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C03ADE23028E7A0056DB5E /* MoveCell.xib */; };
 		F8C03AE3230291720056DB5E /* MoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C03AE2230291720056DB5E /* MoveCell.swift */; };
 		F8C03AE5230299470056DB5E /* CollectionCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C03AE4230299470056DB5E /* CollectionCellFactory.swift */; };
@@ -59,6 +61,8 @@
 		6FD10FA8D6AFE4220BA9B655 /* Pods-RPSLS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPSLS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPSLS/Pods-RPSLS.release.xcconfig"; sourceTree = "<group>"; };
 		AFBD39F1BCAA3F4C1C4FB821 /* Pods_RPSLS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPSLS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66E891C4FD8493B46AA8687 /* Pods-RPSLS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPSLS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPSLS/Pods-RPSLS.debug.xcconfig"; sourceTree = "<group>"; };
+		F8AF3B1E2305782900C9D9AB /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		F8B9018E23040974009BCF49 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F8C03ADE23028E7A0056DB5E /* MoveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoveCell.xib; sourceTree = "<group>"; };
 		F8C03AE2230291720056DB5E /* MoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCell.swift; sourceTree = "<group>"; };
 		F8C03AE4230299470056DB5E /* CollectionCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellFactory.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 				F8C2BF062301427700B2A9D0 /* MainMenuViewController.swift */,
 				F8C2BF522301799700B2A9D0 /* ModeMenuViewController.swift */,
 				F8C2BF5D2301B28000B2A9D0 /* GameViewController.swift */,
+				F8B9018E23040974009BCF49 /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				F8C2BF472301499500B2A9D0 /* MainMenuViewModel.swift */,
 				F8C2BF50230177EB00B2A9D0 /* ModeMenuViewModel.swift */,
 				F8C2BF5F2301B28B00B2A9D0 /* GameViewModel.swift */,
+				F8AF3B1E2305782900C9D9AB /* ResultViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -459,7 +465,9 @@
 				F8C2BF482301499500B2A9D0 /* MainMenuViewModel.swift in Sources */,
 				F8C03AE3230291720056DB5E /* MoveCell.swift in Sources */,
 				F8C2BF5C230189B700B2A9D0 /* ColorHelper.swift in Sources */,
+				F8B9018F23040974009BCF49 /* ResultViewController.swift in Sources */,
 				F8C2BF51230177EB00B2A9D0 /* ModeMenuViewModel.swift in Sources */,
+				F8AF3B1F2305782900C9D9AB /* ResultViewModel.swift in Sources */,
 				F8D0F6E92302CBAC00A41CCF /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				F8C2BF5A230180DA00B2A9D0 /* ViewHelper.swift in Sources */,
 				F8C2BF642301B37400B2A9D0 /* Move.swift in Sources */,

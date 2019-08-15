@@ -30,4 +30,13 @@ class ViewModelFactory {
                              gameMode: gameMode,
                              gameManager: gameManager)
     }
+    
+    static func createResultViewModel(gameManager: GameManager?,
+                                      gameMode: GameMode?,
+                                      delegate: BaseViewModelDelegate) -> ResultViewModel {
+        
+        return ResultViewModel(delegate: delegate,
+                               gameMode: gameMode,
+                               gameManager: gameManager)
+    }
 }

@@ -15,18 +15,27 @@ class GameManager {
         case Draw
     }
     
+    var result: GameResult?
     var gameMode: GameMode?
     var moves: [Move]                       = []
     var score: (player: Int, computer: Int) = (0,0) //lhs is player, rhs is computer
+    var rhs: Move?
+    var lhs: Move?
     
     init (gameMode: GameMode?) {
-        createMoveSetBasedOn(gameMode?.game)
         self.gameMode = gameMode
+        reset()
+    }
+    
+    deinit {
+        print("GameManager has been deinitialized")
     }
     
     func createMoveSetBasedOn(_ game: GameMode.Game?) {
         score = (0,0)
         moves.removeAll()
+        rhs   = nil
+        lhs   = nil
         
         switch game {
         case .RPS?:
@@ -39,24 +48,33 @@ class GameManager {
     }
     
     func randomized() -> Move {
+        self.lhs = nil
+        self.rhs = nil
+        
         return moves[Int.random(in: 0..<moves.count)]
     }
     
-    func compareMove(_ lhs: Move, rhs: Move) -> GameResult {
-        var move = lhs.winSet?[rhs.name ?? blank_]
+    func compareMove(_ lhs: Move,
+                     rhs: Move,
+                     completion: (() -> Void)) {
+        self.lhs = lhs
+        self.rhs = rhs
+        
+        var move               = lhs.winSet?[rhs.name ?? blank_]
+        result                 = .Draw
         
         if move != nil {
             score.player += 1
-            return .Win
+            result   = .Win
         }
         
         move = rhs.winSet?[lhs.name ?? blank_]
         if move != nil {
             score.computer += 1
-            return .Lose
+            result   = .Lose
         }
         
-        return .Draw
+        completion()
     }
     
     func createRock() -> Move {
@@ -121,6 +139,10 @@ class GameManager {
         
         return spock
     }
+    
+    func reset() {
+        createMoveSetBasedOn(gameMode?.game)
+    }
 }
 
 //MARK: - Privates
@@ -146,13 +168,18 @@ class MockGameManager: GameManager {
     
     var mockMove: Move?
     
-    override func compareMove(_ lhs: Move, rhs: Move) -> GameResult {
+    override func compareMove(_ lhs: Move,
+                              rhs: Move,
+                              completion: (() -> Void)) {
         if let move = mockMove {
-            return super.compareMove(lhs,
-                                      rhs: move)
+            super.compareMove(lhs,
+                              rhs: move,
+                              completion: completion)
+            return
         }
         
-        return super.compareMove(lhs,
-                                  rhs: rhs)
+        super.compareMove(lhs,
+                          rhs: rhs,
+                          completion: completion)
     }
 }

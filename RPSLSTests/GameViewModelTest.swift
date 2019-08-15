@@ -17,11 +17,19 @@ enum MoveEnum: Int {
     case Spock
 }
 
+enum TestCase {
+    
+    case ResultDriven
+    case ScoreDriven
+}
+
 class GameViewModelTest: XCTestCase {
 
     var gameManager: MockGameManager?
     var gameMode: GameMode?
     var viewModel: GameViewModel?
+    var testCase: TestCase?
+    var expectedResult: GameManager.GameResult?
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -43,13 +51,14 @@ class GameViewModelTest: XCTestCase {
     func matchTest(computer: Move?,
                    index: Int,
                    expectedResult: GameManager.GameResult) {
-        
+        self.testCase         = .ResultDriven
+        self.expectedResult   = expectedResult
         gameManager?.mockMove = computer
         
         viewModel?.setMoveAt(IndexPath(row: index,
                                        section: 0))
         
-        XCTAssert(viewModel?.match() == expectedResult, "Should win")
+        viewModel?.match()
     }
     
     func testRPSRock() {
@@ -191,22 +200,28 @@ class GameViewModelTest: XCTestCase {
     func testScoreComputer() {
         createDependency(game: .RPS)
         
+        testCase              = .ScoreDriven
         gameManager?.mockMove = gameManager?.createPaper()
         
         viewModel?.setMoveAt(IndexPath(row: MoveEnum.Rock.rawValue,
                                        section: 0))
         
-        let match = viewModel?.match()
-        
-        if match == .Lose {
-            XCTAssert(gameManager?.score.computer == 1,
-                      "Computer should score 1 after winning")
-        } else {
-            XCTFail("Should be lose")
-        }
+        viewModel?.match()
     }
 }
 
 extension GameViewModelTest: BaseViewModelDelegate {
-    func didUpdateViewmodel(_ viewModel: BaseViewModel) {}
+    func didUpdateViewmodel(_ viewModel: BaseViewModel) {
+        let result = self.viewModel?.getResult()
+        if testCase == .ResultDriven {
+            XCTAssert(result == expectedResult, "Should win")
+        } else {
+            if result == .Lose {
+                XCTAssert(gameManager?.score.computer == 1,
+                          "Computer should score 1 after winning")
+            } else {
+                XCTFail("Should be lose")
+            }
+        }
+    }
 }

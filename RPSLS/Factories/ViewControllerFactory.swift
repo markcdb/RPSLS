@@ -36,4 +36,24 @@ class ViewControllerFactory {
         
         return vc
     }
+    
+    static func createResultVC(gameMode: GameMode?,
+                               gameManager: GameManager?,
+                               computerMove: Move?,
+                               chosenMove: Move?) -> ResultViewController? {
+        let sid = StoryboardIDs.result
+        
+        let viewController  = Storyboard.rpsls.instantiateViewController(withIdentifier: sid)
+        guard let vc = viewController as? ResultViewController else { return nil }
+        
+        let vm       = ViewModelFactory.createResultViewModel(gameManager: gameManager,
+                                                              gameMode: gameMode,
+                                                              delegate: vc)
+        vm.setChosenMove(chosenMove)
+        vm.setComputerMove(computerMove)
+        
+        vc.viewModel = vm
+        
+        return vc
+    }
 }

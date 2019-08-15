@@ -18,8 +18,8 @@ class MoveCell: UICollectionViewCell {
             if self.isSelected == true {
                 UIImageView.animate(withDuration: 0.13) {
                     self.maskedView?.alpha    = 0
-                    self.imageView?.transform = CGAffineTransform(scaleX: 1.30,
-                                                                  y: 1.30)
+                    self.imageView?.transform = CGAffineTransform(scaleX: 1.2,
+                                                                  y: 1.2)
                 }
             } else {
                 UIImageView.animate(withDuration: 0.13) {
@@ -28,7 +28,6 @@ class MoveCell: UICollectionViewCell {
                                                                   y: 1.0)
                 }
             }
-
         }
     }
     

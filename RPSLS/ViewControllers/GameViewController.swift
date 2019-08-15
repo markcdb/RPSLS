@@ -15,6 +15,8 @@ class GameViewController: BaseViewController<GameViewModel> {
     @IBOutlet weak var progressContainer: UIView?
     @IBOutlet weak var progressLabel: UILabel?
     
+    private var selectedIndexPath: IndexPath?
+    
     var circularProgress: CircularProgress?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +31,6 @@ class GameViewController: BaseViewController<GameViewModel> {
         collectionView?.register(UINib(nibName: Cells.moveCell,
                                        bundle: nil),
                                  forCellWithReuseIdentifier: Cells.moveCell)
-        /*
-        if viewModel?.getGame() == .RPSLS {
-            collectionViewHeightConstraint.constant = Heights.cvExtendedHeight
-        }
-        */
         
         circularProgress = CircularProgress(frame: CGRect(x: 0,
                                                           y: 0,
@@ -44,27 +41,44 @@ class GameViewController: BaseViewController<GameViewModel> {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView?.reloadData()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        circularProgress?.animateInSeconds(10,
+        viewModel?.resetChosen()
+        
+        if viewModel?.getGameMode()?.playType == .CVC {
+            startRandomSelect()
+        }
+        
+        circularProgress?.animateInSeconds(5,
                                            label: progressLabel,
-                                           completion: {[weak self] in
+                                           partial: {[weak self] in
                                             guard let self = self else { return }
                                             self.startRandomSelect()
-        })
+        }) {[weak self] in
+            guard let self = self else { return }
+            self.viewModel?.match()
+            self.push()
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func push() {
+        super.push()
+        
+        if let vc = ViewControllerFactory.createResultVC(gameMode: viewModel?.getGameMode(),
+                                                         gameManager: viewModel?.getGameManager(),
+                                                         computerMove: viewModel?.computerMove,
+                                                         chosenMove: viewModel?.chosenMove) {
+            navigationController?.pushViewController(vc,
+                                                     animated: true)
+        }
     }
-    */
 }
 
 //MARK: - Custom methods
@@ -127,6 +141,7 @@ UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
+        selectedIndexPath = indexPath
         viewModel?.setMoveAt(indexPath)
         
         let rows = collectionView.numberOfItems(inSection: 0)

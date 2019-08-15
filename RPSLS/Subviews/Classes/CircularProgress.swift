@@ -45,6 +45,7 @@ class CircularProgress: UIView {
     
     func animateInSeconds(_ seconds: Double,
                           label: UILabel?,
+                          partial: @escaping (() -> Void),
                           completion: @escaping (() -> Void)){
         var buffer: Double = 1
         label?.text = String(Int(seconds))
@@ -53,6 +54,7 @@ class CircularProgress: UIView {
                                          repeats: true) { timer in
                                             if seconds == buffer {
                                                 timer.invalidate()
+                                                completion()
                                             }
                                             
                                             label?.text = String(Int(seconds - buffer))
@@ -63,7 +65,7 @@ class CircularProgress: UIView {
                                             if (seconds - buffer) == 2 {
                                                 //Trigger completion when timer
                                                 //is almost done
-                                                completion()
+                                                partial()
                                             }
         }
         

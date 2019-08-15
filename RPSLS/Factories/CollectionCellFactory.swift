@@ -18,6 +18,8 @@ class CollectionCellFactory {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cells.moveCell,
                                                       for: indexPath) as? MoveCell
         
+        cell?.maskedView?.alpha = 0
+        
         if let cell = cell {
             cell.imageView?.image = UIImage(named: viewModel?.getMoveImageAt(indexPath) ?? blank_)
         }
