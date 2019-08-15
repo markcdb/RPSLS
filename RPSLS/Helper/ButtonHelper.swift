@@ -1,5 +1,5 @@
 //
-//  ViewHelper.swift
+//  ButtonHelper.swift
 //  RPSLS
 //
 //  Created by Mark Christian Buot on 12/08/2019.

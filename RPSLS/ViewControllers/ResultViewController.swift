@@ -31,7 +31,7 @@ class ResultViewController: BaseViewController<ResultViewModel> {
         
         let pScore               = viewModel?.getGameScore().player ?? 0
         let cScore               = viewModel?.getGameScore().computer ?? 0
-        computerImageView?.image = UIImage(named: viewModel?.getComputerImage() ?? blank_)
+        computerImageView?.image = UIImage(named: viewModel?.getComputerImage() ?? blank_)?.rotate(radians: .pi)
         playerImageView?.image   = UIImage(named: viewModel?.getPlayerImage() ?? blank_)
         resultLabel?.text      = viewModel?.getResultText()
         playerScore?.text      = String(pScore)

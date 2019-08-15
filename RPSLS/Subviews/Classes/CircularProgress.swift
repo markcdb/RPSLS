@@ -62,7 +62,7 @@ class CircularProgress: UIView {
                                             self.shapeLayer.strokeEnd = CGFloat(percent)
                                             buffer += 1
                                             
-                                            if (seconds - buffer) == 2 {
+                                            if (seconds - buffer) == 0 {
                                                 //Trigger completion when timer
                                                 //is almost done
                                                 partial()

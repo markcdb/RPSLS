@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D0017A4AA0718AD7206ACE8 /* Pods_RPSLS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD39F1BCAA3F4C1C4FB821 /* Pods_RPSLS.framework */; };
 		F8AF3B1F2305782900C9D9AB /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF3B1E2305782900C9D9AB /* ResultViewModel.swift */; };
+		F8AF3B212305969300C9D9AB /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF3B202305969300C9D9AB /* ImageHelper.swift */; };
 		F8B9018F23040974009BCF49 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9018E23040974009BCF49 /* ResultViewController.swift */; };
 		F8C03ADF23028E7A0056DB5E /* MoveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C03ADE23028E7A0056DB5E /* MoveCell.xib */; };
 		F8C03AE3230291720056DB5E /* MoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C03AE2230291720056DB5E /* MoveCell.swift */; };
@@ -30,7 +30,7 @@
 		F8C2BF532301799700B2A9D0 /* ModeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF522301799700B2A9D0 /* ModeMenuViewController.swift */; };
 		F8C2BF5523017AB900B2A9D0 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5423017AB900B2A9D0 /* ViewControllerFactory.swift */; };
 		F8C2BF5723017AF400B2A9D0 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5623017AF400B2A9D0 /* GlobalConstants.swift */; };
-		F8C2BF5A230180DA00B2A9D0 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF59230180DA00B2A9D0 /* ViewHelper.swift */; };
+		F8C2BF5A230180DA00B2A9D0 /* ButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF59230180DA00B2A9D0 /* ButtonHelper.swift */; };
 		F8C2BF5C230189B700B2A9D0 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5B230189B700B2A9D0 /* ColorHelper.swift */; };
 		F8C2BF5E2301B28000B2A9D0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5D2301B28000B2A9D0 /* GameViewController.swift */; };
 		F8C2BF602301B28B00B2A9D0 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BF5F2301B28B00B2A9D0 /* GameViewModel.swift */; };
@@ -58,10 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6FD10FA8D6AFE4220BA9B655 /* Pods-RPSLS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPSLS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPSLS/Pods-RPSLS.release.xcconfig"; sourceTree = "<group>"; };
-		AFBD39F1BCAA3F4C1C4FB821 /* Pods_RPSLS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPSLS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E66E891C4FD8493B46AA8687 /* Pods-RPSLS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPSLS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPSLS/Pods-RPSLS.debug.xcconfig"; sourceTree = "<group>"; };
 		F8AF3B1E2305782900C9D9AB /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		F8AF3B202305969300C9D9AB /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		F8B9018E23040974009BCF49 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F8C03ADE23028E7A0056DB5E /* MoveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoveCell.xib; sourceTree = "<group>"; };
 		F8C03AE2230291720056DB5E /* MoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCell.swift; sourceTree = "<group>"; };
@@ -89,7 +87,7 @@
 		F8C2BF522301799700B2A9D0 /* ModeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeMenuViewController.swift; sourceTree = "<group>"; };
 		F8C2BF5423017AB900B2A9D0 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		F8C2BF5623017AF400B2A9D0 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
-		F8C2BF59230180DA00B2A9D0 /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		F8C2BF59230180DA00B2A9D0 /* ButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHelper.swift; sourceTree = "<group>"; };
 		F8C2BF5B230189B700B2A9D0 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		F8C2BF5D2301B28000B2A9D0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F8C2BF5F2301B28B00B2A9D0 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D0017A4AA0718AD7206ACE8 /* Pods_RPSLS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,23 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40D02F758BDF4FEF0D136058 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AFBD39F1BCAA3F4C1C4FB821 /* Pods_RPSLS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AC542F2E4CD6E94C646F60B9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E66E891C4FD8493B46AA8687 /* Pods-RPSLS.debug.xcconfig */,
-				6FD10FA8D6AFE4220BA9B655 /* Pods-RPSLS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F8C03ADC23028E540056DB5E /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +148,6 @@
 				F8C2BF182301427800B2A9D0 /* RPSLSTests */,
 				F8C2BF232301427800B2A9D0 /* RPSLSUITests */,
 				F8C2BF022301427600B2A9D0 /* Products */,
-				AC542F2E4CD6E94C646F60B9 /* Pods */,
-				40D02F758BDF4FEF0D136058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,9 +164,9 @@
 		F8C2BF032301427600B2A9D0 /* RPSLS */ = {
 			isa = PBXGroup;
 			children = (
+				F8C2BF042301427700B2A9D0 /* AppDelegate.swift */,
 				F8C2BF58230180CF00B2A9D0 /* Helper */,
 				F8C2BF4D2301772900B2A9D0 /* Factories */,
-				F8C2BF042301427700B2A9D0 /* AppDelegate.swift */,
 				F8C2BF402301488200B2A9D0 /* Constants */,
 				F8C2BF3E2301487600B2A9D0 /* Storyboards */,
 				F8C2BF3D2301486D00B2A9D0 /* ViewControllers */,
@@ -292,8 +270,9 @@
 		F8C2BF58230180CF00B2A9D0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F8C2BF59230180DA00B2A9D0 /* ViewHelper.swift */,
+				F8C2BF59230180DA00B2A9D0 /* ButtonHelper.swift */,
 				F8C2BF5B230189B700B2A9D0 /* ColorHelper.swift */,
+				F8AF3B202305969300C9D9AB /* ImageHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -305,7 +284,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8C2BF292301427800B2A9D0 /* Build configuration list for PBXNativeTarget "RPSLS" */;
 			buildPhases = (
-				671AADC1118821A5F69D2FB3 /* [CP] Check Pods Manifest.lock */,
 				F8C2BEFD2301427600B2A9D0 /* Sources */,
 				F8C2BEFE2301427600B2A9D0 /* Frameworks */,
 				F8C2BEFF2301427600B2A9D0 /* Resources */,
@@ -426,31 +404,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		671AADC1118821A5F69D2FB3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RPSLS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F8C2BEFD2301427600B2A9D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -469,9 +422,10 @@
 				F8C2BF51230177EB00B2A9D0 /* ModeMenuViewModel.swift in Sources */,
 				F8AF3B1F2305782900C9D9AB /* ResultViewModel.swift in Sources */,
 				F8D0F6E92302CBAC00A41CCF /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
-				F8C2BF5A230180DA00B2A9D0 /* ViewHelper.swift in Sources */,
+				F8C2BF5A230180DA00B2A9D0 /* ButtonHelper.swift in Sources */,
 				F8C2BF642301B37400B2A9D0 /* Move.swift in Sources */,
 				F8C2BF4F2301773400B2A9D0 /* ViewModelFactory.swift in Sources */,
+				F8AF3B212305969300C9D9AB /* ImageHelper.swift in Sources */,
 				F8C2BF052301427700B2A9D0 /* AppDelegate.swift in Sources */,
 				F8C2BF5E2301B28000B2A9D0 /* GameViewController.swift in Sources */,
 				F8C2BF532301799700B2A9D0 /* ModeMenuViewController.swift in Sources */,
@@ -652,7 +606,6 @@
 		};
 		F8C2BF2A2301427800B2A9D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E66E891C4FD8493B46AA8687 /* Pods-RPSLS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -672,7 +625,6 @@
 		};
 		F8C2BF2B2301427800B2A9D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FD10FA8D6AFE4220BA9B655 /* Pods-RPSLS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
