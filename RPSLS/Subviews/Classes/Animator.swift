@@ -88,60 +88,15 @@ class Animator {
 extension Animator {
 
     func perform(_ viewAnimation: ViewAnimation) {
-        let animation = viewAnimation.animation
         let view      = viewAnimation.view
         let frame     = viewAnimation.frame
         
-        switch animation {
-        case .fromTop?:
-            performTop(view,
-                       frame: frame)
-        case .fromLeft?:
-            performLeft(view,
-                        frame: frame)
-        case .fromRight?:
-            performRight(view,
-                         frame: frame)
-        case .fromBottom?:
-            performBottom(view,
-                          frame: frame)
-        default:
-            break
-        }
+        perform(view,
+                frame: frame)
     }
     
-    func performTop(_ view: UIView?,
-                    frame: CGRect?) {
-        animateWithAnimations({[weak view] in
-            view?.alpha   = 1
-            view?.frame = frame ?? .zero
-        }) { isCompleted in
-            
-        }
-    }
-    
-    func performLeft(_ view: UIView?,
-                     frame: CGRect?) {
-        animateWithAnimations({[weak view] in
-            view?.alpha   = 1
-            view?.frame = frame ?? .zero
-        }) { isCompleted in
-            
-        }
-    }
-    
-    func performRight(_ view: UIView?,
-                      frame: CGRect?) {
-        animateWithAnimations({[weak view] in
-            view?.alpha   = 1
-            view?.frame = frame ?? .zero
-        }) { isCompleted in
-            
-        }
-    }
-    
-    func performBottom(_ view: UIView?,
-                       frame: CGRect?) {
+    func perform(_ view: UIView?,
+                 frame: CGRect?) {
         animateWithAnimations({[weak view] in
             view?.alpha   = 1
             view?.frame = frame ?? .zero
